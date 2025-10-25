@@ -29,14 +29,15 @@ jobs:
           pyinstaller --onefile --name wem2csv wem2csv/cli.py
 
       - name: Verify build output
+        shell: pwsh
         run: |
-          if not exist dist\wem2csv.exe (
-            echo "Build failed: wem2csv.exe not found"
-            exit /b 1
-          )
-          dir dist
+          if (!(Test-Path "dist/wem2csv.exe")) {
+            Write-Error "Build failed: wem2csv.exe not found"
+            exit 1
+          }
+          Get-ChildItem -Path dist
 
-      - name: Upload EXE as artifact
+      - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
         with:
           name: wem2csv-exe
@@ -47,6 +48,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Download EXE artifact
         uses: actions/download-artifact@v4
         with:
