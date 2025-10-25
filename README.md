@@ -250,14 +250,3 @@ See the full license text in [LICENSE](LICENSE).
 | Translation    | Disabled                           | Use `--transcript-lang en` for English translation |
 | GPU            | Auto detect                        | CUDA if available                                  |
 | Cleanup        | Deletes WEM files on success       | Keeps them on failure                              |
-
----
-
-**Author:** Mo
-**GitHub:** [vonMort](https://github.com/vonMort)
-**Project:** `wem2csv`
-**Purpose:** Automated and language aware transcription of Killing Floor 2 character voice lines for documentation and analysis.
-
----
-
-*(End of README.md)*
