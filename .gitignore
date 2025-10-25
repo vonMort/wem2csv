@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Build
+dist/
+build/
+*.spec
+*.egg-info/
+
+# Runtime
+ogg-collection/
+wem-collection/
+tools/
+voicelines.csv

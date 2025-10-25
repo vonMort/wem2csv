@@ -1,0 +1,12 @@
+# Runtime dependencies for wem2csv
+# NOTE: Pin setuptools to <81 to avoid removal of pkg_resources that ctranslate2 still imports.
+#       See https://setuptools.pypa.io/en/latest/pkg_resources.html (removal as early as 2025-11-30)
+setuptools>=68,<81
+
+torch
+torchvision
+torchaudio
+faster-whisper
+pandas
+tqdm
+soundfile

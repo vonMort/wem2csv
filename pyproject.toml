@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wem2csv"
+version = "0.1.0"
+description = "WEM → OGG → CSV pipeline with language-aware CLI (Whisper)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mo" }]
+dependencies = [
+  "faster-whisper",
+  "pandas",
+  "tqdm",
+  "soundfile"
+]
+
+[project.scripts]
+wem2csv = "wem2csv.cli:main"
